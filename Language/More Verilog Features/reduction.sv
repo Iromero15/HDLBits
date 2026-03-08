@@ -4,3 +4,10 @@
 // These are unary operators that have only one operand (similar to the NOT operators ! and ~).
 // You can also invert the outputs of these to create NAND, NOR, and XNOR gates, e.g., (~& d[7:0]). 
 
+module top_module (
+    input [7:0] in,
+    output parity); 
+
+    assign parity = ^in[7:0];
+
+endmodule
